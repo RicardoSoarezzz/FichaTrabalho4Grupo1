@@ -19,12 +19,12 @@ public class ParkingLot {
     /**
      * The maximum capacity of the parking lot.
      */
-    private int capacity;
+    private final int CAPACITY = 500;
 
     /**
      * The number of free parking spots available in the parking lot.
      */
-    private int freeSpots;
+    private static int FREE_SPOTS;
 
     /**
      * Retrieves the list of ticket records for the parking lot.
@@ -68,16 +68,7 @@ public class ParkingLot {
      * @return The maximum capacity of the parking lot.
      */
     public int getCapacity() {
-        return capacity;
-    }
-
-    /**
-     * Sets the maximum capacity of the parking lot.
-     *
-     * @param capacity The new maximum capacity.
-     */
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+        return CAPACITY;
     }
 
     /**
@@ -86,7 +77,7 @@ public class ParkingLot {
      * @return The number of free parking spots.
      */
     public int getFreeSpots() {
-        return freeSpots;
+        return FREE_SPOTS;
     }
 
     /**
@@ -95,6 +86,11 @@ public class ParkingLot {
      * @param freeSpots The new number of free parking spots.
      */
     public void setFreeSpots(int freeSpots) {
-        this.freeSpots = freeSpots;
+        this.FREE_SPOTS = freeSpots;
+    }
+
+    public Student getHighestPayer(){
+        Student student = new Student(12, "Jorge", "EI");
+        return student;
     }
 }
