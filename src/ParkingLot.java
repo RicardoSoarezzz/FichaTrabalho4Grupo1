@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,12 +11,12 @@ public class ParkingLot {
     /**
      * The list of ticket records for the parking lot.
      */
-    private List<Ticket> ticketRecord;
+    private ArrayList<Ticket> ticketRecord;
 
     /**
      * The list of current tickets issued for parked vehicles.
      */
-    private List<Ticket> ticketCurrent;
+    private ArrayList<Ticket> ticketCurrent;
 
     /**
      * The maximum capacity of the parking lot.
@@ -31,7 +33,7 @@ public class ParkingLot {
      *
      * @return The list of ticket records.
      */
-    public List<Ticket> getTicketRecord() {
+    public ArrayList<Ticket> getTicketRecord() {
         return ticketRecord;
     }
 
@@ -40,26 +42,8 @@ public class ParkingLot {
      *
      * @param ticketRecord The new list of ticket records.
      */
-    public void setTicketRecord(List<Ticket> ticketRecord) {
+    public void setTicketRecord(ArrayList<Ticket> ticketRecord) {
         this.ticketRecord = ticketRecord;
-    }
-
-    /**
-     * Retrieves the list of current tickets issued for parked vehicles.
-     *
-     * @return The list of current tickets.
-     */
-    public List<Ticket> getTicketCurrent() {
-        return ticketCurrent;
-    }
-
-    /**
-     * Sets the list of current tickets issued for parked vehicles.
-     *
-     * @param ticketCurrent The new list of current tickets.
-     */
-    public void setTicketCurrent(List<Ticket> ticketCurrent) {
-        this.ticketCurrent = ticketCurrent;
     }
 
     /**
@@ -87,10 +71,6 @@ public class ParkingLot {
      */
     public void setFreeSpots(int freeSpots) {
         this.FREE_SPOTS = freeSpots;
-    }
 
-    public Student getHighestPayer(){
-        Student student = new Student(12, "Jorge", "EI");
-        return student;
     }
 }
