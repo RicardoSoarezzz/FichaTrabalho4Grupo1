@@ -71,5 +71,6 @@ public class ParkingLot {
      */
     public void setFreeSpots(int freeSpots) {
         this.FREE_SPOTS = freeSpots;
+
     }
 }
