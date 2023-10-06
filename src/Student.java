@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * The Student class represents a student with an ID, name, and course information.
  */
@@ -17,6 +19,11 @@ public class Student {
      * The course in which the student is enrolled.
      */
     private String course;
+
+    /**
+     * List of all tickets
+     */
+    private List<Ticket>ticketsRecord;
 
     /**
      * Constructs a new Student object with deafult parameters
@@ -91,6 +98,22 @@ public class Student {
     }
 
     /**
+     * Retrieves the list of tickets that current student has.
+     * @return List of tickets
+     */
+    public List<Ticket> getTicketsRecord() {
+        return ticketsRecord;
+    }
+
+    /**
+     * Adds a ticket to the ticket's list of the student
+     * @param ticket The ticket to add to the ticket's list
+     */
+    public void addTicket(Ticket ticket) {
+        this.ticketsRecord.add(ticket);
+    }
+
+    /**
      * Returns a string representation of the Student object.
      *
      * @return A string containing the ID, name, and course of the student.
@@ -102,5 +125,17 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", course='" + course + '\'' +
                 '}';
+    }
+
+    /**
+     *
+     * @return
+     */
+    public double getTotalPayments(){
+        double total = 0;
+        for(int i=0; i<ticketsRecord.size(); i++){
+            total += ticketsRecord.get(i).getAmountPaid();
+        }
+        return total;
     }
 }
