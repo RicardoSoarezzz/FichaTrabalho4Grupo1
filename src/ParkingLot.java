@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,5 +73,25 @@ public class ParkingLot {
     public void setFreeSpots(int freeSpots) {
         this.FREE_SPOTS = freeSpots;
 
+    }
+    public ParkingLot() {
+        ticketRecord = new ArrayList<>();
+        ticketCurrent = new ArrayList<>();
+        FREE_SPOTS = CAPACITY;
+    }
+
+    /** Add a ticket based on student number*/
+
+    public void addTicket( Student student) {
+        if (FREE_SPOTS > 0) {
+            // Create a new Ticket object with the student number
+            Ticket ticket = new Ticket("TicketID", LocalTime.now(), "Vehicle", student);
+            ticketCurrent.add(ticket);
+            ticketRecord.add(ticket);
+            FREE_SPOTS--;
+            System.out.println("Ticket added for student number " + student);
+        } else {
+            System.out.println("The parking lot is full. Please try again later.");
+        }
     }
 }
