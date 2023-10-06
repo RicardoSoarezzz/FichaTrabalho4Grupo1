@@ -5,31 +5,26 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ParkingLot park = new ParkingLot();
-        Scanner input =new Scanner(System.in);
 
-        int op = -1;
-
-        while(op != 0){
             System.out.println("Choose one option: ");
             System.out.println("1. Add Ticket ");
             System.out.println("2. Remove Ticket ");
             System.out.println("3. View Ticket ");
             System.out.println("0. Leave Program ");
             System.out.println("Option: ");
-            op =input.nextInt();
-            input.nextLine();
 
-            if(op < 0 || op > 4){
+
+            if (op < 0 || op > 4) {
                 System.out.println("Choose one option: ");
                 System.out.println("1. Add Ticket ");
                 System.out.println("2. Remove Ticket ");
                 System.out.println("3. View Ticket ");
                 System.out.println("0. Leave Program ");
                 System.out.println("Option: ");
-                op =input.nextInt();
+                op = input.nextInt();
                 input.nextLine();
             }
-            switch (op){
+            switch (op) {
                 case 1:
                     System.out.println("Ola Manuel");
                     break;
@@ -41,6 +36,5 @@ public class Main {
                     break;
             }
         }
-
     }
 }
