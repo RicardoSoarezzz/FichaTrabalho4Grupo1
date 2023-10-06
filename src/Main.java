@@ -34,10 +34,10 @@ public class Main {
                     System.out.println("Ola Manuel");
                     break;
                 case 2:
-                    System.out.println("Ola Joao");
+                    System.out.println("Ola Tiago");
                     break;
                 case 3:
-                    System.out.println("Ola Tiago");
+                    System.out.println("Ola Jorge");
                     break;
             }
         }
