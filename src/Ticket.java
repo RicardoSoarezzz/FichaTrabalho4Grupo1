@@ -6,12 +6,14 @@ public class Ticket {
     LocalTime Exit;
     String vehicle;
     Double amount;
+    Student student;
 
-    public Ticket(LocalTime entry, LocalTime exit, String vehicle, Double amount) {
+    public Ticket(LocalTime entry, LocalTime exit, String vehicle, Double amount, Student student) {
         Entry = entry;
         Exit = exit;
         this.vehicle = vehicle;
         this.amount = amount;
+        this.student = student;
     }
 
     public LocalTime getEntry() {
@@ -46,6 +48,14 @@ public class Ticket {
         this.amount = amount;
     }
 
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
     @Override
     public String toString() {
         return "Ticket{" +
@@ -53,6 +63,7 @@ public class Ticket {
                 ", Exit=" + Exit +
                 ", vehicle='" + vehicle + '\'' +
                 ", amount=" + amount +
+                ", student=" + student +
                 '}';
     }
 }
