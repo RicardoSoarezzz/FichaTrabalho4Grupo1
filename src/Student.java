@@ -19,6 +19,11 @@ public class Student {
     private String course;
 
     /**
+     * Constructs a new Student object with deafult parameters
+     */
+    public Student(){}
+
+    /**
      * Constructs a new Student object with the specified ID, name, and course.
      *
      * @param id    The unique identifier for the student.

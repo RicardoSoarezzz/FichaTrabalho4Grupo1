@@ -7,6 +7,10 @@ import java.time.LocalTime;
 public class Ticket {
 
     /**
+     * The unique identifier for the ticket.
+     */
+    private String ticketID;
+    /**
      * The time when the vehicle entered the parking lot.
      */
     private LocalTime entryTime;
@@ -38,7 +42,8 @@ public class Ticket {
      * @param vehicle   The description of the vehicle (e.g., license plate number).
      * @param student   The student associated with the ticket (if applicable).
      */
-    public Ticket(LocalTime entryTime, String vehicle, Student student) {
+    public Ticket(String ticketID, LocalTime entryTime, String vehicle, Student student) {
+        this.ticketID = ticketID;
         this.entryTime = entryTime;
         this.student = student;
         this.vehicle = vehicle;
@@ -133,4 +138,14 @@ public class Ticket {
     public void setStudent(Student student) {
         this.student = student;
     }
+
+    /**
+     * Retrieves the unique number of the ticket.
+     *
+     * @return ticket's unique identifier
+     */
+    public String getTicketID() {
+        return ticketID;
+    }
+
 }
